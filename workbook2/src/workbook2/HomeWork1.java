@@ -1,10 +1,15 @@
 package workbook2;
 
+import java.util.Scanner;
+
 public class HomeWork1 {
 
 	public static void main(String[] args) {
 
-		   int orange= 127;
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("오렌지 개수를 적어주세요");
+		   int orange= scn.nextInt();
 		      int tenbox=0;
 		      int fivebox=0;
 		      
