@@ -21,9 +21,11 @@ public class RandomGame {
 		
 		case 3 : System.out.println("보");break;
 		}
+		
+		
+	
 				
 		
-	}
 	
-
+	}
 }
