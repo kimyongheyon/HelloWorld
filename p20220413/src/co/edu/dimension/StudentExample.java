@@ -30,18 +30,18 @@ public class StudentExample {
 	    }
 	    	
 	    
-//	    Scanner scn = new Scanner(System.in);
+	    Scanner scn = new Scanner(System.in);
 //	    
 //	    System.out.println("학생이름 입력하세요");
 //
-//	    String serchName = scn.nextLine();
-//	    
-//	    for(int i=0; i<students.length; i++) {
-//	    	if(students[i].studName.equals(serchName)) {
-//	    		System.out.println(students[i].score);
-//	    	}
-//	    	
-//	    }
+	    String serchName = scn.nextLine();
+	    
+	    for(int i=0; i<students.length; i++) {
+	    	if(students[i].studName.equals(serchName)) {
+	    		System.out.println(students[i].score);
+	    	}
+	    	
+	    }
 	    System.out.println("end of prog.");
 	    
 	}
