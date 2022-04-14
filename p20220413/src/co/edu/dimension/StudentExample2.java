@@ -21,7 +21,7 @@ public class StudentExample2 {
 		
 		
 		Scanner scn = new Scanner(System.in);
-		
+		int ff =0;
 		Student[] students = {new Student(), new Student(), new Student()};
 		for(int i=0; i< students.length; i++) {
 			System.out.println("-----------------------------------------------------------------");
@@ -36,21 +36,20 @@ public class StudentExample2 {
 			    	
 			    }
 		  Scanner scn2 = new Scanner(System.in);
-		  System.out.println("조회하고싶은 이름을 입력해주세요 종료시 -1를 입력");
+		  System.out.println("조회하고싶은 이름을 입력해주세요.");
 		String serchName = scn2.nextLine();
 		 for(int i=0; i<students.length; i++) {
 			 
 		    	if(students[i].studName.equals(serchName) ) {
 		    		System.out.println("점수는:"+students[i].score +"나이는:"+ students[i].age);
+		    		ff++;
 		    		}
 		    		
 		    	}
-	    	
-	
+		 if(ff==0) {
+	    	System.out.println("조회된 아이디가 없습니다.");
+		 }
 	    
-		
-		
-		
 		
 	}
 }
