@@ -13,7 +13,7 @@ public class BoardExe {
 		boardList.init(5);// 배열의 크기지정.
 
 		while (true) {
-			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.조회 9.종료");
+			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.조회 6.작성자조회 9.종료");
 			System.out.println("선택>>>");
 			int menu = scn.nextInt();
 			scn.nextLine();
@@ -83,10 +83,16 @@ public class BoardExe {
 				}
 
 			}
-			else if(menu == 6) { //작성자 조회 동일한 작성자가 쓴 작성글은 전부 보여주게 만들기
-				                  //작성자 이름을 받고 그 받은 이름과 동일한 사람의 게시글을 다 보여주게 한다.
-			}
+			else if(menu == 6) { 
+				System.out.println("작성자를 입력하시오");
+				String bWriter = scn.nextLine();
+				Board wr = boardList.searchWriter(bWriter);
+				wr.getInfo();
 
+			}
+				
+				
+			
 			else if (menu == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;

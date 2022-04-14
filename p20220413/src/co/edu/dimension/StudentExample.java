@@ -32,7 +32,7 @@ public class StudentExample {
 	    
 	    Scanner scn = new Scanner(System.in);
 //	    
-//	    System.out.println("학생이름 입력하세요");
+	    System.out.println("학생이름 입력하세요");
 //
 	    String serchName = scn.nextLine();
 	    

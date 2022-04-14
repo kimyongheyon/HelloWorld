@@ -74,5 +74,22 @@ public class BoardList {
 		}
 		return null;
 	}
+	
+	//작성자 조회
+	public Board searchWriter(String bWriter) {
+		for(int i=0; i<boards.length; i++) {
+			if(boards[i].getWriter().equals(bWriter)) {
+			}
+		}
+		return null;	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
