@@ -76,12 +76,19 @@ public class BoardList {
 	}
 	
 	//작성자 조회
-	public Board searchWriter(String bWriter) {
-		for(int i=0; i<boards.length; i++) {
-			if(boards[i].getWriter().equals(bWriter)) {
+	public Board[] searchWriter(String writer) {
+		Board[] sBoards = new Board[5];
+		for(int i=0; i<boards.length; i++) { //찾을 대상의 배열을 뒤지고 찾는 것
+			if(boards[i]!= null && boards[i].getWriter().equals(writer)) {
+			for(int j=0; j<sBoards.length; j++) { //찾아와서 sBoard라는 곳에 다시 돌면서 저장하는 것
+				if(sBoards[j]==null) {
+					sBoards[j] = boards[i];
+					break;
+				}
+			}
 			}
 		}
-		return null;	
+		return sBoards;
 	}
 	
 	

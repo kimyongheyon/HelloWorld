@@ -76,7 +76,16 @@ public class Board {
 
 		System.out.printf(info, //
 				this.boardNum, this.writer, title, this.searchCnt, this.content);
+		// -를 붙이면 왼쪽부터 정렬
 	}
-	// -를 붙이면 왼쪽부터 정렬
+
+	@Override //어노테이션 , toString을 자식클래스가 재정의 하겠다는 게 @override
+	// 프로그램에게 추가적인 정보를 제공해는 매타데ㅣ이터;
+	public String toString() {
+		return "Board [boardNum=" + boardNum + ", title=" + title + ", content=" + content + ", writer=" + writer
+				+ ", searchCnt=" + searchCnt + "]";
+	}
+	
+	
 
 }

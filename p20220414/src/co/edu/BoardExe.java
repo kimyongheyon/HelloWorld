@@ -1,5 +1,6 @@
 package co.edu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BoardExe {
@@ -15,7 +16,12 @@ public class BoardExe {
 		while (true) {
 			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.조회 6.작성자조회 9.종료");
 			System.out.println("선택>>>");
-			int menu = scn.nextInt();
+			int menu = -1;
+			try {
+				menu = scn.nextInt(); // 숫자반환.
+			} catch (InputMismatchException e) { // e는 그냥 참조변수 아무거나 상관없음
+				System.out.println("잘못된 처리를 시도했습니다.");
+			}
 			scn.nextLine();
 
 			if (menu == 1) {
@@ -32,9 +38,9 @@ public class BoardExe {
 				int chk = boardList.addBoard(newBod);
 				if (chk == 0) {
 					System.out.println("정상입력되었습니다.");
-				} else if(chk == -1){
+				} else if (chk == -1) {
 					System.out.println("저장공간이 없습니다.");
-				}else if(chk == 1) {
+				} else if (chk == 1) {
 					System.out.println("이미 있는 번호입니다.");
 				}
 
@@ -82,17 +88,21 @@ public class BoardExe {
 					getBoard.getDetailInfo();
 				}
 
-			}
-			else if(menu == 6) { 
-				System.out.println("작성자를 입력하시오");
-				String bWriter = scn.nextLine();
-				Board wr = boardList.searchWriter(bWriter);
-				wr.getInfo();
+			} else if (menu == 6) { // 작성자 기준으로
+				System.out.println("검색할 작성자 입력");
+				String sWriter = scn.nextLine();
+				Board[] writerList = boardList.searchWriter(sWriter);
+				System.out.println("게시글번호     제목            내용              사용자    조회수");
+				System.out.println("========================================================");
+				for (Board board : writerList) {
+					if (board != null) {
+						board.getInfo();
+						// writerList 내용을 루틴 돌면서 출력.
 
+					}
+				}
 			}
-				
-				
-			
+
 			else if (menu == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
