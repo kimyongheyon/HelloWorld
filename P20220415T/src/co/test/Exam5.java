@@ -12,8 +12,7 @@ import java.util.Scanner;
 public class Exam5 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		Exam4 f = new Exam4();
-		f.
+		int[] friends = new int[3];
 
 		while (true) {
 			System.out.println("1.추가 2.수정 3.삭제 4.조회(이름) 5.종료");
@@ -21,8 +20,8 @@ public class Exam5 {
 			System.out.println("선택>>>>>");
 			int menu = -1;
 			menu = Integer.parseInt(scn.nextLine());
-			
-			if(menu == 1) {
+
+			if (menu == 1) {
 				System.out.println("친구 이름을 입력");
 				String fn = scn.nextLine();
 				System.out.println("친구 생일을 입력");
@@ -30,25 +29,20 @@ public class Exam5 {
 				System.out.println("친구 휴대폰번호 입력");
 				String ph = scn.nextLine();
 				Exam4 newExam = new Exam4(fn, bd, ph);
-				
-				
+
 			}
-			
-			else if(menu == 2){
-				
-			}
-			else if(menu == 3) {
-				
-			}
-			else if(menu ==4) {
-				
-			}
-			else if(menu == 5) {
+
+			else if (menu == 2) {
+
+			} else if (menu == 3) {
+
+			} else if (menu == 4) {
+
+			} else if (menu == 5) {
 				System.out.println("종료합니다");
 				break;
 			}
-	
-			
+
 		}
 	}
 //		System.out.println("end of prog.");

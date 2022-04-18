@@ -6,24 +6,28 @@ package co.test;
 public class Exam3 {
 	public static void main(String[] args) {
 		
-		int[] arry ={10,20,40,20,20,20,20,30,40,50};
+		
+		int[] arry ={10,20,40,20,20,70,20,30,40,50};
 		int sum =0;
 		double avg=0.0;
-		int result=0;
 		for(int i=0; i<arry.length; i++) {
 			sum+=arry[i];
 			}
 		
 		avg =sum/10;
+		
+		
+		
+		for(int j =0; j < arry.length; j++) {
+			if(avg < arry[j]) {
+				System.out.println(arry[j]);
+			
+				
 		      
-		int[] arry2 = new int[10];
-				for(int j=0; j<arry2.length; j++) {
-					if(arry2[j]>avg) {
-						result = arry2[j];
+		
 					}
 				}
 				System.out.println(sum +" "+avg);
-				System.out.println(result);
 		}
 		
 	}

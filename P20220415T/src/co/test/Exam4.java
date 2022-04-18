@@ -1,6 +1,5 @@
 package co.test;
 
-import co.edu.Board;
 
 //클래스의 생성과 필드, 메소드, 생성자.
 public class Exam4 {
@@ -59,7 +58,7 @@ public void init(int size) {
 // 추가
 public String addFrn(Exam4 fir) {
 	int errorCase = -1;
-	for (int i = 0; i < boards.length; i++) {
+	for (int i = 0; i < .length; i++) {
 }
 
 
