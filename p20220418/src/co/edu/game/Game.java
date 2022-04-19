@@ -7,50 +7,47 @@ import java.util.Scanner;
 public class Game {
 
 	public static void main(String[] args) {
-
+		
+		
 		Scanner scn = new Scanner(System.in);
-
 		int[] program = new int[5];
-
+		
 		for (int i = 0; i < program.length; i++) {
-
+			
 			program[i] = (int) (Math.random() * 5) + 1;
-
+			
 			for (int j = 0; j < i; j++) {
 				if (program[i] == program[j]) {
 					i--;
-					break;
 				}
 			}
 
 		}
+		int[] program2 = new int[5];
+
 		while (true) {
 			System.out.println("=======================");
 			System.out.println("1~5중에 5라는 숫자 맞추기 게임");
 			System.out.println("[1] [2] [3] [4] [5] 중 하나를 선택하세요");
-
-			int search;
-			for(int y= 0; y<program.length; y++) {
-				if(program[y]==5) {
-					
-				}
-			}
+				
+		  
+			program[j] = program2[x];
+		
 			int menu = scn.nextInt();
 			scn.nextLine();
 
+			
+			
 			if (menu == 1) {
-				for (int i = 0; i < 5; i++) {
-					program[i] = i + 1;
-				}
-				for (int i = 0; i < 5; i++) {
-					if (i == 1) {
-						System.out.println("[" + program[i] + "]");
-					} else {
-						System.out.println("[*]");
+				
+				for(int x=0; i<program.length; i++) {
+					if(program[i] != 5) {
+						System.out.println("틀렸습니다.");
 					}
-				}
+				}	
+			}
 
-			} else if (menu == 2) {
+			 else if (menu == 2) {
 
 			} else if (menu == 3) {
 
@@ -69,5 +66,5 @@ public class Game {
 		
 
 	}
-
 }
+

@@ -11,7 +11,10 @@ public class Friend {
 	
 	
     //생성자
-	protected Friend() {
+public Friend(String name) {
+		this.name = name;
+	}
+	public Friend() {
 		
 	}
 	public Friend(String name, String phone) {
@@ -22,7 +25,7 @@ public class Friend {
 
 	
 	//메소드
-	protected String getName() {
+	public String getName() {
 		return name;
 	}
 
