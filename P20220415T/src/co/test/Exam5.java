@@ -12,8 +12,10 @@ import java.util.Scanner;
 public class Exam5 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		int[] friends = new int[3];
-
+		
+		Exam4 friend = new Exam4();
+		
+		
 		while (true) {
 			System.out.println("1.추가 2.수정 3.삭제 4.조회(이름) 5.종료");
 			System.out.println("----------------------------------");
@@ -23,20 +25,35 @@ public class Exam5 {
 
 			if (menu == 1) {
 				System.out.println("친구 이름을 입력");
-				String fn = scn.nextLine();
+				String name = scn.nextLine();
 				System.out.println("친구 생일을 입력");
-				String bd = scn.nextLine();
+				String brith = scn.nextLine();
 				System.out.println("친구 휴대폰번호 입력");
-				String ph = scn.nextLine();
-				Exam4 newExam = new Exam4(fn, bd, ph);
-
+				String phone = scn.nextLine();
+				Exam4 newExam = new Exam4(name,brith,phone);
+				friend.addFriend(newExam);
+				System.out.println("추가되었습니다.");
 			}
 
 			else if (menu == 2) {
+				System.out.println("수정할 이름>>");
+				String name = scn.nextLine();
+				Exam4 fr = new Exam4(name);
+				friend.modify(fr);
+				System.out.println("수정되었습니다");
+				
+				
 
 			} else if (menu == 3) {
+				System.out.println("삭제할 이름을 입력");
+				String name = scn.nextLine();
+				friend.reFriend(name);
+				System.out.println("삭제되었습니다.");
 
 			} else if (menu == 4) {
+				System.out.println("조회할 이름>>");
+				String name = scn.nextLine();
+				friend.findFriend(name);
 
 			} else if (menu == 5) {
 				System.out.println("종료합니다");
@@ -45,5 +62,4 @@ public class Exam5 {
 
 		}
 	}
-//		System.out.println("end of prog.");
 }

@@ -18,7 +18,6 @@ public class ModifierExample {
 
 			
 		
-		Friend friend = new Friend();
 	}
 
 }

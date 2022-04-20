@@ -38,6 +38,9 @@ public class FriendApp {
 				service.modFriend(fr);
 
 			} else if (menu == 3) {
+				System.out.println("삭제할 이름을 입력하시오");
+				String name = scn.nextLine();
+				service.remFriend(name);
 
 			} else if (menu == 4) {
 				System.out.println("조회하고 싶은 이름을 입력하시오");

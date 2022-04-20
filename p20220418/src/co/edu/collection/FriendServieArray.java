@@ -36,6 +36,12 @@ public class FriendServieArray implements FriendService {
 
 	@Override
 	public void remFriend(String name) {
+		for(int i=0; i<friends.length; i++) {
+			if(friends[i] != null && friends[i].getName().equals(name)) {
+				friends[i].setName(null) ;
+				System.out.println("삭제되었습니다.");
+			}
+		}
 
 	}
 
