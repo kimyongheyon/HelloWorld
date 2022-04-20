@@ -56,10 +56,6 @@ public void init(int size) {
 
 
 // 추가
-public String addFrn(Exam4 fir) {
-	int errorCase = -1;
-	for (int i = 0; i < .length; i++) {
-}
 
 
 

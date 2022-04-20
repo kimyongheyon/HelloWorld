@@ -8,6 +8,8 @@ public class Friend {
 	 
 	 private String phone;
 	 
+	 private Gender gender;  
+	 
 	 
 	 
 	 
@@ -24,6 +26,14 @@ public class Friend {
 	}
 
 	
+
+	public Friend(String name, String phone, Gender gender) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.gender = gender;
+	}
+
 
 	public String getName() {
 		return name;
@@ -45,11 +55,22 @@ public class Friend {
 	}
 
 
+	public Gender getGender() {
+		return gender;
+	}
+
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Friend [name=" + name + ", phone=" + phone + "]";
+		return "Friend [name=" + name + ", phone=" + phone + ", gender=" + gender + "]";
 	}
-	 
+
+
 	 
 	 
 	
