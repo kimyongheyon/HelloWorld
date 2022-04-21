@@ -6,24 +6,33 @@ package co.test;
 public class Exam3 {
 	public static void main(String[] args) {
 
-		int[] array = { 10, 20, 40, 20, 20, 70, 20, 30, 40, 50 };
-		int sum = 0;
-		double avg = 0.0;
-		int result =0;
-
-		for (int i = 0; i < array.length; i++) {
-			sum += array[i];
-		}
+		int[] array = new int[10];
 		
 		int[] array2 = new int[10];
-		for (int j = 0; j < array2.length; j++) {
-			avg = sum / 10;
-			
-			if (array2[j] > avg) {
-				System.out.println("합: " + sum + "평균: " + avg + "큰 수: " + array2[j]);
-
-			}
+		
+		
+		
+		for(int i=0; i< array.length; i++) {
+			 array[i] = (int)(Math.random()*10) +1;
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
