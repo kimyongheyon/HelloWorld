@@ -1,5 +1,6 @@
 package workbook4;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FriendServiceArray implements FriendService {
@@ -29,7 +30,7 @@ public class FriendServiceArray implements FriendService {
 		for(int i=0; i<friends.length; i++) {
 			if(friends[i] != null && friends[i].getName().equals(friend.getName())) {
 				System.out.println("연락처를 입력하시오");
-				friends[i].setPhone(scn.nextLine());;
+				friends[i].setPhone(friend.getName());;
 				System.out.println("수정이 완료되었습니다.");
 				break;
 			}
@@ -62,6 +63,11 @@ public class FriendServiceArray implements FriendService {
 			System.out.println("존재하지 않습니다.");
 			
 		}
+		return null;
+	}
+
+	@Override
+	public ArrayList<Friend> findGender(Gender gender) {
 		return null;
 	}
 	
